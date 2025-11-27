@@ -1,13 +1,16 @@
-print('введите часы')
-a= int(input())
-print('введите минуты')
-b= int(input())
-print('введите секунды')
-c= int(input())
+def C():
+    print('введите часы:')
+    h = int(input())
+    print('введите минуты:')
+    m = int(input())
+    print('введите секунды:')
+    b = int(input())
+    return h, m, b
 
-def f(a,b,c):
-    f= a*60*60+b*60+c
-    return f
-r= f(a,b,c)
+def f(h, m, b):
+    C = h * 60 * 60 + m * 60 + b
+    return C
+a, b, c = C()
 
-print(r)
+r = f(a, b, c)
+print('количество сек',r)
